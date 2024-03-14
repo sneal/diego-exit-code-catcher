@@ -1,0 +1,11 @@
+---
+applications:
+  - name: diego-exit-code-catcher
+    type: worker
+    command: ./diego-exit-code-catcher
+    path: ./bin/cf
+    health-check-type: process
+    memory: 256M
+    no-route: true
+    buildpacks:
+      - binary_buildpack
